@@ -1,7 +1,3 @@
-#!/usr/bin/env python3
-
-# Word frequency exercise
-# TODO: (Read detailed instructions in the Readme file)
 import re
 
 #This is a function that checks if a text qualifies as a sentence. You do not need to modify this!
@@ -26,11 +22,11 @@ def is_sentence(text):
 
 def get_sentence():
     while True:
-        sentence = input("Enter a sentence: ")
+        sentence = input("Enter a sentence: ").strip()
         if is_sentence(sentence):
             return sentence
         else:
-            print("Please enter a valid sentence starting with a capital letter and ending with punctuation")
+            print("Please enter a valid sentence starting with a capital letter and ending with punctuation.")
 
 def calculate_frequencies(sentence):
     words = sentence[:-1].split()
@@ -57,3 +53,4 @@ def main():
     print_frequencies(words, freqs)
 
 main()
+
